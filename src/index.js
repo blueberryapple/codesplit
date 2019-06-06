@@ -9,3 +9,5 @@ const obj = {
 of(obj)
     .pipe(map(() => propOr(12, 'hi', obj) * 3))
     .subscribe(val => console.log(val));
+
+import(/* webpackChunkName: "folktale" */ 'folktale/maybe').then(Maybe => console.log(Maybe.Just('hey').getOrElse()));
